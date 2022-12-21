@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+    #The Application
+    php_npm:
+        image: app_php_generico
+        container_name: app_php
+        build:
+            context: ./
+            dockerfile: dockerconfig/app.dockerfile
+        volumes:
+            - ./:/var/www:consistent
+        env_file:
+            - ./.env
+        networks:
+            - defaultdev_studies
+    
+    # The Web Server
+    nginx_server:
+        container_name: nginx_server
+        build:
+            context: ./
+            dockerfile: dockerconfig/web.dockerfile
+        ports:
+            - 8991:80
+        networks:
+            - defaultdev_studies
+    
+    # The Database
+    mysql:
+        container_name: mysql_database
+        build:
+            context: ./
+            dockerfile: dockerconfig/database.dockerfile
+        volumes:
+            - ./dbdata:/var/lib/mysql
+        restart: always
+        environment:
+            - "MYSQL_DATABASE=banco_app_generico"
+            - "MYSQL_USER=usuario"
+            - "MYSQL_PASSWORD=YbjzaV37!HQL%RQ1"
+            - "MYSQL_ROOT_PASSWORD=%KUVFdD%Uddkq^FE"
+        ports:
+            - 8992:3306
+        networks:
+            - defaultdev_studies
+
+networks:
+    defaultdev_studies:
+        name: custom_network_studies
