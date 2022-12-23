@@ -9,6 +9,7 @@
     <body>
         <?php
         echo "concatenando" , "1";
+        23232
         ?>
     </body>
 </html>
