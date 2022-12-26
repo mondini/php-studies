@@ -1,15 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-    <body>
-        <?php
-        echo "concatenando" , "1";
-        23232
-        ?>
-    </body>
-</html>
+<?php
+
+// criando variaveis
+
+$variavel = "teste";
+
+echo $variavel . " <br>";
+
+// referencial
+
+$x = 0;
+$y = $x;
+$x = 1;
+
+echo $y . " <br>";
+
+$x1 = 0;
+$y2 = &$x1;
+$x1 = 1;
+
+// constantes
+define('name', 'juninho');
+
+echo name . " <br>";
+
+// ou
+
+const aprenderPhp = "true";
+$tempo = "variavel";
+
+echo aprenderPhp . " <br>";
+
+// pegar o tipo da variavel
+echo gettype(aprenderPhp) . " <br>";
+var_dump($x);
+
+// Arrays 
+
+$lista = [1, 2, "3", '2,3', 3.4 , $x];
+// echo
+print_r($lista);
