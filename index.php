@@ -1,41 +1,19 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-// criando variaveis
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos</title>
 
-$variavel = "teste";
+</head>
 
-echo $variavel . " <br>";
+    <body>
+    <!-- Faça um programa que mostre a mensagem "Alo mundo" na tela. -->
+        <?php
+        echo "Hello World"; 
+        ?>
+    </body>
 
-// referencial
-
-$x = 0;
-$y = $x;
-$x = 1;
-
-echo $y . " <br>";
-
-$x1 = 0;
-$y2 = &$x1;
-$x1 = 1;
-
-// constantes
-define('name', 'juninho');
-
-echo name . " <br>";
-
-// ou
-
-const aprenderPhp = "true";
-$tempo = "variavel";
-
-echo aprenderPhp . " <br>";
-
-// pegar o tipo da variavel
-echo gettype(aprenderPhp) . " <br>";
-var_dump($x);
-
-// Arrays 
-
-$lista = [1, 2, "3", '2,3', 3.4 , $x];
-// echo
-print_r($lista);
+</html>
