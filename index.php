@@ -10,26 +10,24 @@
 </head>
 
 <body>
-<!-- Crie um algoritmo que solicite a entrada de um número, e exiba a tabuada de 0 a 10 de acordo com o número solicitado, ex: 
-Entrada = 4
-Saída = 4 X 0 = 0...4 X 10 = 40. -->
+    <!-- Crie um algoritmo que solicite um número, e faça o cálculo fatorial do mesmo, exiba o resultado na tela. Ex: Entrada = 3 Processamento: (3 * 2) * 1 Saída: 6 -->
 
-<form action="" method="POST">
-    Digite um Numero: <input type="number" name="number">
-    <input type="Submit" name="Enviar">
-</form>
+    <form action="/index.php" method="POST">
+        Digite um Numero: <input type="number" name="number">
+        <input type="Submit" name="Enviar">
+    </form>
 
-<?php
-    $number = $_POST['number'];
+    <?php
 
-    function multiplicationTable($number){
-        for ($i=0; $i < 11; $i++) { 
-            echo $number, "x", $i, "=", $number * $i, "<br>"; 
+    if (isset($_POST['number'])) {
+        $number = $_POST['number'];
+        $fatorial = 1;
+        for ($i = $number; $i >= 1; $i--) {
+            $fatorial *= $i;
         }
+        echo $fatorial;
     }
-
-    multiplicationTable($number);
-?>
+    ?>
 </body>
 
 </html>
