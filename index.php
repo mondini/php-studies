@@ -10,29 +10,25 @@
 </head>
 
 <body>
-    <!-- Faça um programa que peça as 4 notas bimestrais e mostre a média.-->
+    <!-- Faça um programa para calcular a área de uma circunferência, considerando a fórmula AREA = π × RAIO2. Utilize as variáveis AREA e RAIO, a constante π (pi = 3,14159) e os operadores aritméticos de multiplicação.-->
 
     <form action="/index.php" method="POST">
-        <h3>Calculadora de Média</h3>
-        Digite a primeira nota <input type="text" name="oneNote"><br>
-        Digite a segunda nota <input type="text" name="twoNote"><br>
-        Digite a terceira nota <input type="text" name="threeNote"><br>
-        Digite a quarta nota <input type="text" name="fourNote"><br>
+        <h3>Calcular área de uma circunferência</h3>
+        Digite o valor do raio: <input type="number" name="raio">
         <input type="submit" name="Enviar">
     </form>
     <?php
-    $oneNote = $_POST['oneNote'];
-    $twoNote = $_POST['twoNote'];
-    $threeNote = $_POST['threeNote'];
-    $fourNote = $_POST['fourNote'];
+    $raio = $_POST['raio'];
 
-    function noteMedia ($one, $two, $three, $four) {
-        $result = ($one + $two + $three + $four) / 4;
-        
-        echo $result;
+    function calcularRaio ($raio){
+        $pi = 3.14;
+        $area = $pi * (pow($raio, 2));
+
+        echo $area;
+
     }
 
-    noteMedia($oneNote, $twoNote, $threeNote, $fourNote);
+    calcularRaio($raio);
     ?>
 </body>
 
