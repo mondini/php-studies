@@ -10,23 +10,29 @@
 </head>
 
 <body>
-    <!-- Crie um algoritmo que solicite um número, e faça o cálculo fatorial do mesmo, exiba o resultado na tela. Ex: Entrada = 3 Processamento: (3 * 2) * 1 Saída: 6 -->
+    <!-- Faça um programa que peça as 4 notas bimestrais e mostre a média.-->
 
     <form action="/index.php" method="POST">
-        Digite um Numero: <input type="number" name="number">
-        <input type="Submit" name="Enviar">
+        <h3>Calculadora de Média</h3>
+        Digite a primeira nota <input type="text" name="oneNote"><br>
+        Digite a segunda nota <input type="text" name="twoNote"><br>
+        Digite a terceira nota <input type="text" name="threeNote"><br>
+        Digite a quarta nota <input type="text" name="fourNote"><br>
+        <input type="submit" name="Enviar">
     </form>
-
     <?php
+    $oneNote = $_POST['oneNote'];
+    $twoNote = $_POST['twoNote'];
+    $threeNote = $_POST['threeNote'];
+    $fourNote = $_POST['fourNote'];
 
-    if (isset($_POST['number'])) {
-        $number = $_POST['number'];
-        $fatorial = 1;
-        for ($i = $number; $i >= 1; $i--) {
-            $fatorial *= $i;
-        }
-        echo $fatorial;
+    function noteMedia ($one, $two, $three, $four) {
+        $result = ($one + $two + $three + $four) / 4;
+        
+        echo $result;
     }
+
+    noteMedia($oneNote, $twoNote, $threeNote, $fourNote);
     ?>
 </body>
 
