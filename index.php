@@ -10,29 +10,22 @@
 </head>
 
 <body>
-    <!-- Faça um programa que:
-
-Leia o nome;
-Leia o sobrenome;
-Concatene o nome com o sobrenome;
-Apresente o nome completo.-->
+    <!-- Faça um programa que leia uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit. A fórmula de conversão é: ℉ = (9 × ℃ + 160) ÷ 5, na qual ℉ é a temperatura em Fahrenheit e ℃ é a temperatura em Celsius.-->
     <form action="./index.php" method="POST">
-        Digite seu nome: <input type="text" name="nome">
-        Digite seu sobrenome: <input type="text" name="sobre">
+        <h3>Conversão de Celsius para Fahrenheit</h3>
+        Digite uma temperatura: <input type="number" name="temp">
         <input type="submit" name="Enviar">
     </form>
-
+    
     <?php
-        $nome = $_POST['nome'];
-        $sobre = $_POST['sobre'];
+        $temp = $_POST['temp'];
 
-        function concatenar ($nome, $sobre){
-            $result = $nome. " " . $sobre;
-
+        function celsiusToFahrenheit ($temp) {
+            $result = (1.8 * $temp) + 32;
             echo $result;
         }
 
-        concatenar($nome, $sobre);
+        celsiusToFahrenheit($temp);
     ?>
 </body>
 
