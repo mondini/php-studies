@@ -10,25 +10,29 @@
 </head>
 
 <body>
-    <!-- Faça um programa para calcular a área de uma circunferência, considerando a fórmula AREA = π × RAIO2. Utilize as variáveis AREA e RAIO, a constante π (pi = 3,14159) e os operadores aritméticos de multiplicação.-->
+    <!-- Faça um programa que:
 
-    <form action="/index.php" method="POST">
-        <h3>Calcular área de uma circunferência</h3>
-        Digite o valor do raio: <input type="number" name="raio">
+Leia o nome;
+Leia o sobrenome;
+Concatene o nome com o sobrenome;
+Apresente o nome completo.-->
+    <form action="./index.php" method="POST">
+        Digite seu nome: <input type="text" name="nome">
+        Digite seu sobrenome: <input type="text" name="sobre">
         <input type="submit" name="Enviar">
     </form>
+
     <?php
-    $raio = $_POST['raio'];
+        $nome = $_POST['nome'];
+        $sobre = $_POST['sobre'];
 
-    function calcularRaio ($raio){
-        $pi = 3.14;
-        $area = $pi * (pow($raio, 2));
+        function concatenar ($nome, $sobre){
+            $result = $nome. " " . $sobre;
 
-        echo $area;
+            echo $result;
+        }
 
-    }
-
-    calcularRaio($raio);
+        concatenar($nome, $sobre);
     ?>
 </body>
 
