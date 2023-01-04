@@ -10,26 +10,29 @@
 </head>
 
 <body>
-    <!-- Faça um programa para determinar o consumo médio de um automóvel sendo fornecida a distância total percorrida pelo automóvel e o total de combustível gasto.
-
+    <!-- Faça um programa que leia os valores de COMPRIMENTO, LARGURA e ALTURA e apresente o valor do volume de uma caixa retangular. Utilize para o cálculo a fórmula VOLUME = COMPRIMENTO × LARGURA × ALTURA.
 -->
+
     <form action="./index.php" method="POST">
-        Digite a distancia total percorrida: <input type="number" name="distancia"><br>
-        Digite o total de combustível gasto: <input type="number" name="combustivel">
-        <input type="submit" name="Enviar">
+        Digite o Valor do comprimento: <input type="number" name="comprimento"><br>
+        Digite o Valor da largura: <input type="number" name="largura"><br>
+        Digite o Valor da altura: <input type="number" name="altura"><br>
+        <input type="submit" name="Enviar"><br>
     </form>
 
     <?php
-        $distancia = $_POST['distancia'];
-        $combustivel = $_POST['combustivel'];
+        $comprimento = $_POST['comprimento'];
+        $largura = $_POST['largura'];
+        $altura = $_POST['altura'];
 
-        function calcularQntdLitros ($distancia, $combustivel){
-            $consumoMédio = $distancia / $combustivel;
+        function calcVolume ($comprimento, $largura, $altura){
+            $volume = $comprimento * $largura * $altura;
 
-            echo $consumoMédio."km";
+            echo $volume;
         }
 
-        calcularQntdLitros($distancia, $combustivel);
+        calcVolume($comprimento, $largura, $altura);
+
     ?>
 </body>
 
