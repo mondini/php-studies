@@ -10,28 +10,25 @@
 </head>
 
 <body>
-    <!-- Faça um programa que leia os valores de COMPRIMENTO, LARGURA e ALTURA e apresente o valor do volume de uma caixa retangular. Utilize para o cálculo a fórmula VOLUME = COMPRIMENTO × LARGURA × ALTURA.
+    <!-- Faça um programa que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias. Calcular quantos dias a pessoa já viveu até hoje.
 -->
-
     <form action="./index.php" method="POST">
-        Digite o Valor do comprimento: <input type="number" name="comprimento"><br>
-        Digite o Valor da largura: <input type="number" name="largura"><br>
-        Digite o Valor da altura: <input type="number" name="altura"><br>
-        <input type="submit" name="Enviar"><br>
+        Digite a sua idade: <input type="number" name="age">
+        <input type="submit" name="Enviar">
     </form>
 
     <?php
-        $comprimento = $_POST['comprimento'];
-        $largura = $_POST['largura'];
-        $altura = $_POST['altura'];
 
-        function calcVolume ($comprimento, $largura, $altura){
-            $volume = $comprimento * $largura * $altura;
+        $age = $_POST['age'];
 
-            echo $volume;
+        function ageToDays ($age){
+            $result = $age * 365;
+            
+            echo "Você já viveu há"." ".$result."". " dias";
         }
 
-        calcVolume($comprimento, $largura, $altura);
+        ageToDays($age);
+
 
     ?>
 </body>
