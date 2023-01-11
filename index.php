@@ -12,9 +12,18 @@
 <body>
 
     <?php
-    
-    //comentarios
-    #comentarios
+
+        function echo() {
+            return true;
+        }
+
+        #Não funciona
+
+        function echoNew() {
+            return true;
+        }
+        
+        #funciona
     ?>
 </body>
 
