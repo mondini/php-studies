@@ -12,16 +12,9 @@
 <body>
 
     <?php
-
-    echo "teste <br>";
-    eCho "teste 2 <br>";
-    echO "teste 3 <br>";
-
-    $nome = "gabriel";
-    $NOME = "GABRIEL";
-
-    echo $nome."<br>". $NOME;
-
+    
+    //comentarios
+    #comentarios
     ?>
 </body>
 
