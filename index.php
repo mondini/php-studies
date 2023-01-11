@@ -10,25 +10,17 @@
 </head>
 
 <body>
-    <!-- Faça um programa que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias. Calcular quantos dias a pessoa já viveu até hoje.
--->
-    <form action="./index.php" method="POST">
-        Digite a sua idade: <input type="number" name="age">
-        <input type="submit" name="Enviar">
-    </form>
 
     <?php
 
-        $age = $_POST['age'];
+    echo "teste <br>";
+    eCho "teste 2 <br>";
+    echO "teste 3 <br>";
 
-        function ageToDays ($age){
-            $result = $age * 365;
-            
-            echo "Você já viveu há"." ".$result."". " dias";
-        }
+    $nome = "gabriel";
+    $NOME = "GABRIEL";
 
-        ageToDays($age);
-
+    echo $nome."<br>". $NOME;
 
     ?>
 </body>
